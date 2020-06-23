@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<style>
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    input[type=number],
+    input[type=text],
+    textarea {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-top: 6px;
+        margin-bottom: 16px;
+        resize: vertical;
+    }
+
+    input[type=submit] {
+        background-color: #4CAF50;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    input[type=submit]:hover {
+        background-color: #45a049;
+    }
+
+    .container {
+        border-radius: 5px;
+        background-color: #f2f2f2;
+        padding: 20px;
+        width: 40%;
+        margin-top: 25px;
+        margin-left: 90px;
+
+    }
+</style>
+
+<body>
+    <br />
+    <br />
+    <h3>Convert Kilometer To Miles</h3>
+    <div class="container">
+        <label>kilometer</label>
+        <input type="number" placeholder="kilometer"  [(ngModel)]="kilometer"/> =
+        <input type="text" placeholder="Miles" [(ngModel)]="miles" />
+        <input (click)='kilometerToMiles()' type="submit" value="Submit" />
+
+    </div>
+
+
+</body>
+
+</html>
+<router-outlet></router-outlet>
